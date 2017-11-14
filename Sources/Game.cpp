@@ -48,7 +48,7 @@ void Update()
         if (targetRect.Overlaps(bulletRect)) {
             score += 1;         // スコアの加算
             bulletPos.x = -999; // 弾を発射可能な状態に戻す
-            PlaySound("se_maoudamashii_system27.mp3");
+            PlaySound("se_maoudamashii_system27.mp3");//SEを再生する（実装：HW16A146　長杉星弥）
         }
     }
 
@@ -77,7 +77,7 @@ void Update()
     FillRect(targetRect, Color::red);
 
     // スコアの描画
-    SetFont("nicoca_v1.ttf", 100.0f);//スコアのサイズを大きくする（実装：HW16A146　長杉星弥）
+    SetFont("nicoca_v1.ttf", 70.0f);//スコアのサイズを大きくする（実装：HW16A146　長杉星弥）
     DrawText(FormatString("%02d", score), Vector2(-319, 150), Color::black);
     DrawText(FormatString("%02d", score), Vector2(-320, 151), Color::white);
 }
